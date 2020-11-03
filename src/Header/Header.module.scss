@@ -1,0 +1,11 @@
+@import "../variables.scss";
+
+.header {
+  background-color: $basebackgroundColor;
+  border-bottom: 1px solid $baseborderColor;
+  .heading {
+    font-size: 3rem;
+    width: 100%;
+    padding: 0.5rem 0 .8rem;
+  }
+}

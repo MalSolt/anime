@@ -1,0 +1,19 @@
+.animeCards {
+  padding: 1rem 0;
+  .cards {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    margin: 0 auto;
+    @media (max-width: 850px) {
+      max-width: 638px;
+    }
+    @media (max-width: 638px) {
+      max-width: 432px;
+    }
+    @media (max-width: 432px) {
+      max-width: 226px;
+    }
+  }
+}
