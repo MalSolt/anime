@@ -7,16 +7,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <Categories
-        categories={[
-          { id: 1, title: "Комедия", selected: false },
-          { id: 2, title: "Приключение", selected: true },
-          { id: 3, title: "Сенен", selected: false },
-          { id: 4, title: "Драма", selected: true },
-          { id: 5, title: "Боевик", selected: true },
-          { id: 6, title: "Повседневность", selected: false },
-        ]}
-      />
+      <Categories />
       <AnimeCards />
     </>
   )
