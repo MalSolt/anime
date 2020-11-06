@@ -22,9 +22,14 @@ const todosSlice = createSlice({
         if (e.id === action.payload) e.selected = !e.selected
       })
     },
+    clearSelected(state, action) {
+      state.forEach(e => {
+        e.selected = false
+      })
+    },
   },
 })
 
-export const { toggleSelected } = todosSlice.actions
+export const { toggleSelected, clearSelected } = todosSlice.actions
 
 export default todosSlice.reducer

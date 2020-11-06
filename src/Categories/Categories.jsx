@@ -2,7 +2,7 @@ import React from "react"
 import s from "./Categories.module.scss"
 import cl from "classnames"
 import { useDispatch, useSelector } from "react-redux"
-import { toggleSelected } from "../redux/reducers/categoriesReducer"
+import { toggleSelected, clearSelected } from "../redux/reducers/categoriesReducer"
 
 export const Categories = () => {
   const categories = useSelector(state => state.categories)
@@ -22,7 +22,14 @@ export const Categories = () => {
 
   return (
     <section className={s.categories}>
-      <div className="container">{buttons}</div>
+      <div className="container">
+        {buttons}
+        {categories.some(e => e.selected) && (
+          <button onClick={() => dispatch(clearSelected())} className={s.clear}>
+            Очистить
+          </button>
+        )}
+      </div>
     </section>
   )
 }
