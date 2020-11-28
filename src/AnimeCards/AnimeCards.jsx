@@ -14,8 +14,8 @@ export const AnimeCards = () => {
   return (
     <section className={s.animeCards}>
       <div className={s.cards}>
-        {filteredCards.map(({ id, category, name, avatar }) => (
-          <AnimeCard key={id} category={category} name={name} avatar={avatar} />
+        {filteredCards.map(({ id, category, name, avatar, url }) => (
+          <AnimeCard key={id} category={category} name={name} avatar={avatar} url={url} />
         ))}
       </div>
     </section>
